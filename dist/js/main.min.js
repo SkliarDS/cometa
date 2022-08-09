@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", function(){
         portrait: null,
         break_word: true,          
     });
+    Ellipsis({
+        ellipsis: '…', 
+        debounce: 0, 
+        responsive: true, 
+        className: '.clamp1', 
+        lines: 4,
+        portrait: null,
+        break_word: false,          
+    });
+    Ellipsis({
+        ellipsis: '…', 
+        debounce: 0, 
+        responsive: true, 
+        className: '.clamp2', 
+        lines: 8,
+        portrait: null,
+        break_word: true,          
+    });
 
     const navIcon = document.querySelector('.nav-icon');
     const mobMenu = document.querySelector('.mobile-menu');
@@ -61,11 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // ====================Слайдер======================
     
     const sertificateSwiper = new Swiper('.sertificate__swiper ', {
-        
-        
         loop: true,
-      
-       
         breakpoints: {
             
             320: {
@@ -86,13 +100,45 @@ document.addEventListener("DOMContentLoaded", function(){
               spaceBetween: 40
             },
             
-        },
-      
+        },      
         navigation: {
             nextEl: '.seriticate-next',
             prevEl: '.seriticate-prev',
-        },
+        },        
         
+    });
+    
+    const partnersSwiper = new Swiper('.partners__swiper ', {
+        loop: true,
+        breakpoints: {
+            
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            425: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+          
+            576: {
+              slidesPerView: 3,
+              spaceBetween: 40
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            },
+            992: {
+              slidesPerView: 5,
+              spaceBetween: 40
+            },
+            
+        },      
+        navigation: {
+            nextEl: '.partners-next',
+            prevEl: '.partners-prev',
+        },        
         
     });
     
