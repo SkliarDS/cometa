@@ -13,9 +13,10 @@
 <link rel="stylesheet" href="./css/style.min.css">
      
 </head>
-<body id="body" class="bg-body"> 
-    <div class="header-bg" style="background-image: url('./img/bg_hero.png');">
-        <div id='overlay'></div>  					
+<body id="body" class=""> 
+    <div class="bg-body">
+        <div class="header-bg" style="background-image: url('./img/bg_hero.png');">
+            <div id='overlay'></div>  					
 <header class="header" id="header">                         
    <div class="container">
         <div class="header__container">
@@ -38,13 +39,14 @@
                 </div>
             </div>
         </div>
-    </div>            
+    </div> 
+    <div class="nav-icon"><span></span></div>     
 </header>       
-        <nav class="nav">
+            <nav class="nav">
     <div class="container">
         <ul class="nav__list mobile-menu">
             <li class="nav__item"><a href="#hero" class="nav__link">Компания</a></li>
-            <li class="nav__item"><a href="#use" class="nav__link">Применение</a></li>   
+            <li class="nav__item"><a href="#section-product" class="nav__link">Применение</a></li>   
             <li class="nav__item nav__item--catalog"><span class="nav__link">Продукция</span>
                 <ul class="nav__sub-list">
                     <li class="nav__sub-item">
@@ -67,10 +69,10 @@
             <li class="nav__item nav__item--hidden"><a class="nav__link" href="#"><img class='' loading='lazy' width='41' height='41' src='img/icons/telegram.png' alt='иконка телеграм'></a></li>                    
             <li class="nav__item nav__item--hidden"><a class="nav__link" href="tel:+74872525200">+7 (4872) 00-00-00</a></li>                    
         </ul>
-        <div class="nav-icon"><span></span></div>
+        
     </div>        
 </nav>   
-        <section class="hero" id="hero">
+            <section class="hero" id="hero">
     <div class="circle cilrcle-1">
         <img class='circle-img' loading='lazy' width='173' height='305' src='img/circle_1_grey.png' alt='шар'>
         <img class='circle-img animation-2' loading='lazy' width='173' height='305' src='img/circle_1_white.png' alt='шар'>
@@ -91,10 +93,10 @@
         </div>
     </div>
 </section>   
-    </div>  
-        
-    <main class="main"> 
-        <section class="section-product" id="section-product">
+        </div>  
+            
+        <main class="main"> 
+            <section class="section-product" id="section-product">
     <div class="circle cilrcle-4">
         <img class='circle-img' loading='lazy' width='255' height='310' src='img/circle_4_grey.png' alt='шар'>
         <img class='circle-img animation-2' loading='lazy' width='255' height='310' src='img/circle_4_white.png' alt='шар'>
@@ -185,8 +187,8 @@
         </div>
     </div>
 </section>
-        <div class="catalog-bg" style="background-image: url('img/bg_sec_catalog.png');">            
-            <section class="section-catalog" id="section-catalog" >
+            <div class="catalog-bg" style="background-image: url('img/bg_sec_catalog.png');">            
+                <section class="section-catalog" id="section-catalog" >
     <div class="circle cilrcle-6">
         <img class='circle-img' loading='lazy' width='173' height='305' src='img/circle_1_grey.png' alt='шар'>
         <img class='circle-img animation-2' loading='lazy' width='173' height='305' src='img/circle_1_white.png' alt='шар'>
@@ -412,7 +414,7 @@
 
     </div>
 </section> 
-            <section class="about" id="about">
+                <section class="about" id="about">
     <div class="circle cilrcle-7">
         <img class='circle-img' loading='lazy' width='315' height='310' src='img/circle_5_grey.png' alt='шар'>
         <img class='circle-img animation-2' loading='lazy' width='315' height='310' src='img/circle_5_white.png' alt='шар'>
@@ -453,9 +455,9 @@
         </div>
     </div>
 </section> 
-        </div>           
-        <div class="sertificate-bg" >
-            <section class="sertificate" id="sertificate">
+            </div>           
+            <div class="sertificate-bg" >
+                <section class="sertificate" id="sertificate">
     <div class="circle cilrcle-3">
         <img class='circle-img' loading='lazy' width='405' height='400' src='img/circle_3_grey.png' alt='шар'>
         <img class='circle-img animation-3' loading='lazy' width='405' height='400' src='img/circle_3_white.png' alt='шар'>
@@ -494,7 +496,7 @@
         </div>
     </div>
 </section>
-            <section class="benefits" id="benefits">
+                <section class="benefits" id="benefits">
     <div class="container small-container">
         <div class="bentefits__title title-center title-line"><h2>ПРЕИМУЩЕСТВА РАБОТЫ С НАМИ</h2></div>
         <div class="benefits__container">
@@ -535,7 +537,7 @@
         </div>
     </div>
 </section>
-            <section class="news" id="news">
+                <section class="news" id="news">
     <div class="circle cilrcle-9">
         <img class='circle-img animation-4' loading='lazy' width='500' height='520' src='img/treangle_3.png' alt='шар'>       
     </div>
@@ -599,7 +601,7 @@
         </div>
     </div>
 </section>
-            <section class="partners" id="partners">
+                <section class="partners" id="partners">
     <div class="circle cilrcle-3">
         <img class='circle-img' loading='lazy' width='405' height='400' src='img/circle_3_grey.png' alt='шар'>
         <img class='circle-img animation-3' loading='lazy' width='405' height='400' src='img/circle_3_white.png' alt='шар'>
@@ -633,13 +635,106 @@
         </div>
     </div>
 </section>
-        </div>
+                
+            </div>
+        </main>
         
-        
-                    
-                      
-    </main>
-    <footer>GGGGGGGGGGGGGGGGGGGG</footer>
+    </div>    
+    
+                 
+    <a href="#header" class="scroll-top scroll-top--hide" id="scroll-top">				
+    <img class='' loading='lazy' width='40' height='20' src='img/icons/arrow_up.png' alt='стрелка на вверх'>
+</a>       
+    <footer class="footer">
+	<section class="section-contacts" id="contacts">
+		<div class="contacts__container">
+			<div class="contacts__block">
+				<div class="contacts__title title-line"><h2>КОНТАКТЫ</h2></div>
+				<div class="contacts__body">
+					<span class="contacts__link-row">
+						<img class='contacts__link-icon' loading='lazy' width='14' height='20' src='img/icons/map.png' alt='иконка'>
+						<span class="contacts__link-text">г. Тула, ул. Тульская, д.1</span>
+					</span>
+					<span class="contacts__link-row">
+						<img class='contacts__link-icon' loading='lazy' width='22' height='14' src='img/icons/mail.png' alt='иконка'>
+						<span class="contacts__link-text">Пн-Пт: 9:00-18:00</span>
+					</span>
+					<a href="#" class="contacts__link-row">
+						<img class='contacts__link-icon' loading='lazy' width='21' height='15' src='img/icons/phone_blue.png' alt='иконка'>
+						<span class="contacts__link-text">+7 (4872) 00-00-00</span>
+					</a>
+					<a href="#" class="contacts__link-row">
+						<img class='contacts__link-icon' loading='lazy' width='21' height='21' src='img/icons/clock.png' alt='иконка'>
+						<span class="contacts__link-text">info@mail.ru</span>
+					</a>
+				</div>
+				<div class="contacts__social">
+					<a href="#" class="contacts__icon-social">
+						<img class='' loading='lazy' width='' height='' src='img/icons/telegram_2.png' alt='иконки соц.сетей'>
+					</a>
+					<a href="#" class="contacts__icon-social">
+						<img class='' loading='lazy' width='' height='' src='img/icons/vk.png' alt='иконки соц.сетей'>
+					</a>
+					<a href="#" class="contacts__icon-social">
+						<img class='' loading='lazy' width='' height='' src='img/icons/twitter.png' alt='иконки соц.сетей'>
+					</a>
+					<a href="#" class="contacts__icon-social">
+						<img class='' loading='lazy' width='' height='' src='img/icons/fac.png' alt='иконки соц.сетей'>
+					</a>
+					<a href="#" class="contacts__icon-social">
+						<img class='' loading='lazy' width='' height='' src='img/icons/youtube.png' alt='иконки соц.сетей'>
+					</a>
+				</div>
+			</div>
+			<div class="contacts__block-map">
+				<div class="tabs" id="tabs">    
+					<ul class="tab-list contacts__tabs-list">
+						<li class="tab-item contacts__tab-item active"><span>Наше местоположение</span></li>
+						<li class="tab-item contacts__tab-item"><span>Как к нам добраться</span></li>                  
+					</ul>
+			
+					<div class="tabs-content active">
+						<div class="contacts__tabs-content">
+							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4f5d9a0e30967271a3d564d38909e5c64cb641ba2acbf6407413aee63e6e44a6&amp;source=constructor" width="100%"  frameborder="0"></iframe>
+						</div>
+					</div>
+			
+					<div class="tabs-content">
+						<div class="contacts__tabs-content">                        
+							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4f5d9a0e30967271a3d564d38909e5c64cb641ba2acbf6407413aee63e6e44a6&amp;source=constructor" width="100%"  frameborder="0"></iframe>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</section>
+	<div class="container">
+		<div class="footer__nav">
+			<nav class="nav">				
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#hero" class="nav__link">Компания</a></li>
+					<li class="nav__item"><a href="#section-product" class="nav__link">Применение</a></li>   
+					<li class="nav__item nav__item--catalog"><a href="#" class="nav__link">Продукция</a></li>
+					<li class="nav__item"><a href="#news" class="nav__link">Новости</a></li>
+					<li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>               
+				</ul>
+			</nav>
+		</div>
+		<div class="footer__row-logo">
+			<a href="./index.html" class="footer__logo">
+				<img class='' loading='lazy' width='222' height='95' src='img/logo_footer.png' alt='логотип'>
+			</a>
+			<div class="footer__copyright">
+				<img class='footer__copyright-img' loading='lazy' width='40' height='65' src='./img/logo_brevis.png' alt='логотип'>
+				<div class="footer__copyright-text">
+					<div class="footer__copyright-link">Разработка корпоративного сайта</div>
+					<a href="#" class="footer__copyright-name">интернет-агентство BREVIS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="footer-copyright"><p>Компания ООО «КОМЕТА» 2020. Все права защищены.</p></section>
+</footer>
     
 	<script src="./files/libs/ellipsis.min.js"></script>
 	<script src="./files/libs/fancybox.umd.js"></script>

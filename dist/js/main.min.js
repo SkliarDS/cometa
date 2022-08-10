@@ -283,77 +283,9 @@ document.addEventListener("DOMContentLoaded", function(){
         
     });
     
-    // ====================== модальные окна =========================
-
-    const modalButtons = document.querySelectorAll('[data-modal-button]');
-    const modalClosebuttons = document.querySelectorAll('[data-modal-close]');
-    const allModals = document.querySelectorAll('[data-modal]');
-
-    // Кнопки - Открыть Модалку
-    modalButtons.forEach(function (item) {
-        item.addEventListener('click', function () {
-            const modalId = this.dataset.modalButton;
-            const modal = document.querySelector('#' + modalId);
-            modal.classList.remove('hidden');
-            // bodyEl.classList.add('noscroll');
-
-            // Находим внутри открываемой модалки блок .modal-window и запрещаем ему передавать клики "наверх"
-            modal.querySelector('.modal-window').addEventListener('click', function (e) {
-                e.stopPropagation();
-            });
-        })
-    })
-
-    // Кнопки - Закрыть Модалку
-    modalClosebuttons.forEach(function (item) {
-        item.addEventListener('click', function () {
-            const modal = this.closest('[data-modal]');
-            modal.classList.add('hidden');
-            // bodyEl.classList.remove('noscroll');		
-        })
-    })
-
-    // Закрытие модалок по фейду
-    allModals.forEach(function (item) {
-        item.addEventListener('click', function () {
-            this.classList.add('hidden');
-            // bodyEl.classList.remove('noscroll');
-        });
-        
-    });
-
-    // Модалка ответ на отправку формы
-    let modalAnswer = document.querySelector('.answer');
-    function showMmodal(){
-        modalAnswer.classList.add('show-modal');
-        clouseModal.addEventListener('click', function(){
-            modalAnswer.classList.remove('show-modal');
-            window.location.reload();
-        }); 
-        setTimeout(function(){
-            mmodal.classList.remove('show-modal');
-            window.location.reload();
-        }, 4000); 
-    }; 
-                
-    // Если модалка не помещается по высоте добовляем скролл
-    let modalWindows = document.querySelectorAll('[data-modal]');
-    modalWindows.forEach(function(item){
-        let heightItem = item.offsetHeight;
-        if(heightItem > window.innerHeight) {
-            item.style.height = '100%';
-        }
-    });
-    // ==================== перезагрузка после отправки формы ==============
-    function reloadWin(){
-        setTimeout(function(){
-            location.reload();
-        }, 3000);
-    }   
-    // ================== Табы ============================================
     
-        
-
+   
+    // ================== Табы ============================================
     let tabBlock = document.querySelectorAll('.tabs');
 
     tabBlock.forEach(element => {
@@ -365,16 +297,15 @@ document.addEventListener("DOMContentLoaded", function(){
     tabHideContent();
     tabShowContent();
 
-    tabsParent.addEventListener('click', function (e) {
-        if (e.target) {
-        tabs.forEach((element, i) => {
-            if (e.target == element) {
+    
+    tabs.forEach((element, i) => {              
+        element.addEventListener('click', function(){
             tabHideContent();
             tabShowContent(i);
-            }
-        });
-        }
+        });          
+        
     });
+    
 
     function tabHideContent() {
         tabs.forEach(element => {
@@ -392,9 +323,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     });
     
-    
-    
-
     //======================== аккордеон с иконками ===============================
     
     const accordeon = document.querySelectorAll("[data-accordion]");
@@ -415,43 +343,17 @@ document.addEventListener("DOMContentLoaded", function(){
 
         //================== скролл на верх =============================================
 
-    //  let scrollTop = document.querySelector('.scroll-top');
-    //  window.onscroll = () => {
-    //      if (window.scrollY > 700) {
-    //          scrollTop.classList.remove('scroll-top--hide');
-    //      }
-    //      else if (window.scrollY < 700) {
-    //          scrollTop.classList.add('scroll-top--hide');
-    //      }
-    //  };
+     let scrollTop = document.querySelector('.scroll-top');
+     window.onscroll = () => {
+         if (window.scrollY > 700) {
+             scrollTop.classList.remove('scroll-top--hide');
+         }
+         else if (window.scrollY < 700) {
+             scrollTop.classList.add('scroll-top--hide');
+         }
+     };
     
-    //  при нажатии скролится вверх на JS
-    //  scrollTop.onclick = () => {
-    //      window.scrollTo(0, 0);
-    //  };
-    //  на jquery
-    //  $('.scroll-top').click(function() {
-    //      $(window).scrollTop(0);
-    // });
-
-    //=========================== маска на тел ============================================
-    // $("body").css("opacity", "1");
-        
-    // $("#back-top").hide(),$(function(){$(window).scroll(function(){200<$(this).scrollTop()?$("#back-top").fadeIn():$("#back-top").fadeOut()}),$("#back-top a").click(function(){return $("body,html").animate({scrollTop:0},600),!1})});
-        
-    // $(".phone").mask("+7(999)999-99-99");
-    // $.fn.setCursorPosition = function (pos) {
-    //     if ($(this).get(0).setSelectionRange) {
-    //         $(this).get(0).setSelectionRange(pos, pos);
-    //     } else if ($(this).get(0).createTextRange) {
-    //         var range = $(this).get(0).createTextRange();
-    //         range.collapse(true);
-    //         range.moveEnd('character', pos);
-    //         range.moveStart('character', pos);
-    //         range.select();
-    //     }
-    // };
-
+  
     // ================отправка формы PHPMailer========================================
 
     const telSelector = document.querySelectorAll('input[type="tel"]');
